@@ -7,10 +7,10 @@ export const initialstate = {
 export const numberReducer = (state=initialstate, action)=>{
     switch (action.type) {
         case ADD_NUMBER : return {
-            ...state, number: state.number + 1
+            ...state,  number: state.number +  +action.payload
         }
         case SUBSTRACT_NUMBER : return {
-            ...state, number: state.number - 1
+          ...state, number: state.number - action.payload
         }
          default: return state
     }
